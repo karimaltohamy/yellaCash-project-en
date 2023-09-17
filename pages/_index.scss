@@ -1,46 +1,12 @@
 @import "../components/variables";
 
 // start hero_section
-.primary-shadow {
-  position: absolute;
-  z-index: 7;
-  bottom: 2%;
-  right: -5%;
-  padding: 11% 18%;
-  background: #9cff6894;
-
-  -webkit-filter: blur(8em);
-  filter: blur(8em);
-  display: none;
-}
-
-.primary-shadow2 {
-  position: absolute;
-  z-index: 7;
-  top: 24%;
-  left: 5%;
-  padding: 5% 10%;
-  background: #f9f75cce;
-  -webkit-filter: blur(8em);
-  filter: blur(8em);
-  display: none;
-}
-
-.primary-shadow3 {
-  position: absolute;
-  z-index: 7;
-  top: 5%;
-  right: 3%;
-  padding: 2% 5%;
-  background: #072f48;
-  -webkit-filter: blur(8em);
-  filter: blur(8em);
-  display: none;
-}
 
 .hero_section {
   height: calc(100vh - 77px);
   position: relative;
+  position: relative;
+  z-index: 9999;
 
   .container {
     height: 100%;
@@ -199,6 +165,30 @@
         color: rgb(177, 177, 177);
       }
 
+      .items {
+        margin-top: 20px;
+        .item {
+          padding-left: 15px;
+          position: relative;
+
+          &:not(:last-child) {
+            margin-bottom: 15px;
+          }
+
+          &::before {
+            left: -5px;
+            top: 7px;
+            content: "";
+            width: 9px;
+            height: 9px;
+            position: absolute;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            background-color: $primary-color;
+          }
+        }
+      }
+
       .btn_outline {
         width: fit-content;
       }
@@ -206,8 +196,23 @@
 
     .image {
       text-align: center;
-      img {
+      position: relative;
+
+      > img {
         width: 80%;
+      }
+
+      .img_abo2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+
+        img {
+          width: 530px;
+          animation: move-x 5s infinite backwards;
+        }
       }
     }
   }
@@ -262,8 +267,25 @@
           font-size: 14px;
         }
 
+        .items {
+          .item {
+            width: fit-content;
+            margin: auto;
+          }
+        }
+
         .btn_outline {
           margin: auto;
+        }
+      }
+
+      .image {
+        .img_abo2 {
+          top: 28%;
+          left: 40%;
+          img {
+            width: 100%;
+          }
         }
       }
     }
@@ -903,3 +925,16 @@
   }
 }
 // end blog_section
+
+// animation
+@keyframes move-x {
+  0% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}

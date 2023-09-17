@@ -1,6 +1,11 @@
 @use "../components/header";
 @use "../components/footer";
 @use "../pages/index";
+@use "../pages/about-us";
+@use "../pages/our-services";
+@use "../pages/protfolio";
+@use "../pages/portfolio-details";
+
 @import "../components/variables";
 
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap");

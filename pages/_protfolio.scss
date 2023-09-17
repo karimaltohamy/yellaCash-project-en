@@ -1,0 +1,83 @@
+@import "../components/variables";
+
+// start protfolio_porjects
+.protfolio_porjects {
+  padding: 70px 0;
+  .boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+
+    .box {
+      padding: 15px;
+      border-radius: 10px;
+      display: block;
+      border: 1px solid rgb(40 42 51);
+
+      &:hover {
+        .image {
+          img {
+            scale: 1.1;
+          }
+        }
+
+        .title {
+          color: $primary-color;
+        }
+      }
+
+      .image {
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 10px;
+
+        img {
+          height: 300px;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+          transition: all 0.4s;
+        }
+      }
+
+      .type {
+        color: $primary-color;
+        font-weight: 500;
+        font-size: 13px;
+        margin-bottom: 5px;
+      }
+
+      .title {
+        font-weight: 600;
+        font-size: 22px;
+      }
+
+      .desc {
+        font-size: 15px;
+        color: rgb(197, 197, 197);
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .protfolio_porjects {
+    padding: 35px 0;
+
+    .boxs {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 20px;
+
+      .box {
+        .image {
+          img {
+            height: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+// end protfolio_porjects

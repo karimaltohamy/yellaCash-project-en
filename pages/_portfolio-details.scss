@@ -1,0 +1,165 @@
+@import "../components/variables";
+
+@import "../components/variables";
+
+// start project_details_section
+.project_details_section {
+  padding: 70px 0;
+
+  .content {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .image {
+    margin-bottom: 10px;
+
+    img {
+      width: 100%;
+      height: 500px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  }
+
+  .line {
+    display: flex;
+    gap: 40px;
+    overflow: visible;
+    position: relative;
+    margin-top: 20px;
+
+    .project_details_info {
+      width: 30%;
+      position: sticky;
+      top: 10px;
+
+      .items {
+        .item {
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+
+          h4 {
+            margin-bottom: 0;
+            font-size: 20px;
+          }
+
+          span {
+            color: gray;
+          }
+        }
+      }
+    }
+
+    .project_details_content {
+      width: 70%;
+
+      .main_title {
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .desc {
+        font-size: 17px;
+        color: gray;
+        line-height: 1.7;
+        margin-bottom: 0;
+
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+      }
+
+      .images {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 10px;
+
+        .img {
+          img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+          }
+        }
+      }
+
+      .secound_title {
+        font-size: 22px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .project_details_section {
+    padding: 40px 0;
+
+    .image {
+      img {
+        height: 300px;
+      }
+    }
+
+    .line {
+      flex-direction: column;
+      gap: 30px;
+
+      > div {
+        width: 100% !important;
+      }
+
+      .project_details_info {
+        .items {
+          .item {
+            &:not(:last-child) {
+              margin-bottom: 7px;
+            }
+
+            h4 {
+              font-size: 19px;
+            }
+
+            span {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+
+      .project_details_content {
+        .main_title {
+          font-size: 22px;
+          margin-bottom: 5px;
+        }
+
+        .desc {
+          font-size: 14px;
+          margin-bottom: 5px !important;
+        }
+
+        .images {
+          flex-direction: column;
+          gap: 10px;
+
+          .img {
+            img {
+              height: 200px;
+            }
+          }
+        }
+
+        .secound_title {
+          font-size: 20px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+// end project_details_section

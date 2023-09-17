@@ -3,6 +3,8 @@
 // start header
 header {
   padding: 12px 0;
+  position: relative;
+  z-index: 9999;
 
   &.info_page {
     background-color: $trans-primary-color;
@@ -118,9 +120,15 @@ header {
 // end header
 
 // start main_head
+
+.bg_main_head {
+  background-image: url(../images/da_main_head.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .main_head {
   height: 300px;
-  background-color: $trans-primary-color;
   position: relative;
   overflow: hidden;
 
@@ -227,7 +235,8 @@ header {
   right: -100%;
   width: 100%;
   height: 100%;
-  background-color: $trans-primary-color;
+  background-color: #1d445b;
+  color: white;
   z-index: 99999;
   transition: all 0.4s;
 
@@ -320,6 +329,24 @@ header {
           }
         }
       }
+    }
+  }
+
+  .lang {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    img {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+    }
+
+    span {
+      font-weight: 500;
     }
   }
 
