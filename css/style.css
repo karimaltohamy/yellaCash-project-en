@@ -69,6 +69,12 @@ header .line .info .lang span {
 header .line .info .mode {
   cursor: pointer;
 }
+header .line .info .mode i {
+  display: none;
+}
+header .line .info .mode i.show {
+  display: block;
+}
 header .line .info .btn_contact {
   background: #6cb446;
   color: white !important;
@@ -2823,6 +2829,7 @@ footer .footer_bottom p {
 }
 .contact_section .line .left form .input_item {
   margin-bottom: 20px;
+  position: relative;
 }
 .contact_section .line .left form .input_item label {
   font-size: 17px;
@@ -2844,6 +2851,13 @@ footer .footer_bottom p {
 }
 .contact_section .line .left form .input_item textarea {
   height: 200px;
+}
+.contact_section .line .left form .input_item .error {
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  font-size: 12px;
+  color: red;
 }
 .contact_section .line .left form .btn_submit {
   background: linear-gradient(45deg, #42c3ff 0%, #6cb446 100%);

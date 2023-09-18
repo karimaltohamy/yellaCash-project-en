@@ -62,6 +62,14 @@ header {
 
       .mode {
         cursor: pointer;
+
+        i {
+          display: none;
+
+          &.show {
+            display: block;
+          }
+        }
       }
 
       .btn_contact {
