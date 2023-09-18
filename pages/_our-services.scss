@@ -45,7 +45,7 @@
     .boxs {
       .box {
         padding: 20px;
-        background-color: #030c10;
+        background-color: var(--bg-section);
         border-radius: 10px;
         display: flex;
         align-items: center;
@@ -145,7 +145,7 @@
 
   .line {
     padding: 70px 20px;
-    background-color: #030c10;
+    background-color: var(--bg-section);
     border-radius: 10px;
     .text {
       .title {
@@ -192,13 +192,14 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              background-color: #0f1a1f;
+              background-color: var(--bg);
               z-index: 100;
               position: relative;
               transition: all 0.5s;
 
               &.active {
                 background-color: $primary-color;
+                color: white;
               }
             }
 

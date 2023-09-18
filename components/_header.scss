@@ -125,6 +125,11 @@ header {
   background-image: url(../images/da_main_head.png);
   background-size: cover;
   background-repeat: no-repeat;
+  color: white !important;
+
+  .btn_outline {
+    color: white !important;
+  }
 }
 
 .main_head {

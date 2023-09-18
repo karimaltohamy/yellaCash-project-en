@@ -555,7 +555,7 @@
 
           span {
             font-size: 15px;
-            color: gainsboro;
+            color: var(--color-gray);
           }
         }
       }
@@ -758,7 +758,7 @@
 
     .desc {
       line-height: 1.8;
-      color: rgb(190, 190, 190);
+      color: var(--color-gray);
     }
 
     .btn_start {

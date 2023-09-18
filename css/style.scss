@@ -5,6 +5,9 @@
 @use "../pages/our-services";
 @use "../pages/protfolio";
 @use "../pages/portfolio-details";
+@use "../pages/blog";
+@use "../pages/blog-details";
+@use "../pages/contact";
 
 @import "../components/variables";
 
@@ -19,12 +22,30 @@ html {
   overflow-x: hidden !important;
 }
 
+:root {
+  --bg: #05131b;
+  --bg-section: #030c10;
+  --color: white;
+  --color-gray: gainsboro;
+  --border-color: rgb(40, 42, 51);
+}
+
 body {
   scroll-behavior: smooth;
   font-family: "Poppins", sans-serif !important;
   overflow-x: hidden !important;
   background-color: #05131b !important;
   color: white !important;
+
+  &.light {
+    --bg: #fbfeff;
+    --bg-section: #e8eced;
+    --color: #05131b;
+    --color-gray: gray;
+    --border-color: rgb(209 209 209);
+    background-color: #fbfeff !important;
+    color: #05131b !important;
+  }
 }
 
 ul {
@@ -46,10 +67,12 @@ svg {
 }
 
 main {
+  background-color: #05131b !important;
   background-image: url(../images/graph.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  color: white !important;
 
   &::before {
     content: "";
@@ -62,8 +85,12 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    z-index: -1;
+    z-index: 1;
     opacity: 0.5;
+  }
+
+  .btn_outline {
+    color: white !important;
   }
 }
 
@@ -307,7 +334,7 @@ $dotSizeLarge: $dotSize + ($dotSize / 2);
 
 .btn_outline {
   background: $primary-color;
-  color: white !important;
+  color: var(--color) !important;
   padding: 8px 25px;
   border-radius: 50px;
   font-size: 17px;

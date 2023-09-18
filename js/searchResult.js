@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const searchInput = document.querySelector(".search_input input");
+  const searchInput = document.querySelector(".input_search input");
   const boxResult = document.querySelector(".box_result");
 
   searchInput.addEventListener("input", (e) => {

@@ -12,7 +12,7 @@
       padding: 15px;
       border-radius: 10px;
       display: block;
-      border: 1px solid rgb(40 42 51);
+      border: 1px solid var(--border-color);
 
       &:hover {
         .image {
@@ -54,7 +54,7 @@
 
       .desc {
         font-size: 15px;
-        color: rgb(197, 197, 197);
+        color: var(--color-gray);
         margin-bottom: 0;
       }
     }
